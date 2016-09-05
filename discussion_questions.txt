@@ -1,0 +1,33 @@
+Recursion
+1. Recursion is a function that calls itself within its definition.
+2. It is necessary to have a base case to make sure the function doesn't error out or go on infinitely.
+
+Graphs
+1. A graph is a data structure containing nodes that link to one another. A node can have multiple parents and multiple children. Nodes can also link back up in a cyclical way, i.e. a node's child could also be its ancestor.
+2. Trees are a type of graph but they are more restrictive. A tree cannot loop in the way a graph can. Trees can only have 0-1 parents per node.
+3. A markov chain is good to model with a graph.
+
+Performance of Different Data Structures
+Data Structure					Index	Search	Add-R	Add-L	Pop-L	Pop-R
+Python List (Array)				O(1)	O(n)	O(1)	 O(n)	 O(n)	O(1)
+Linked List	 	 	 	 	 	 O(n)	O(n)	O(1)	O(1)	O(1)	O(n)
+Doubly-Linked List	 	 	 	 O(n)	 O(n)	O(1)	O(1)	O(1)	O(1)
+Queue (as Array)				X		X	 	O(1)	 X		O(n)	X
+Queue (as LL or DLL)			X		X	 	O(1)	X		O(1)	X
+Stack (as Array, LL, or DLL)	X		X	 	O(1)	X		X 		O(1)
+Deque (as DLL)					X		X	 	 O(1) 	 O(1)	O(1)	O(1)
+
+Data Structure			Get		Add		Delete	Iterate	Memory
+Dictionary (Hash Map)	O(1)	O(1)	O(1)	O(n)	medium
+Set (Hash Map)	 	 	 O(1)	O(1)	O(1)	O(n)	medium	 	 
+Binary Search Tree	 O(logn)	 O(n) 	O(n) 	O(1)	a lot
+Tree	 	 	 	 	O(n) 	O(1)	O(1)	O(1)	a lot
+
+Sorting
+1. The bubble sort algorithm iterates through a list comparing two numbers at a time and determining which is smaller. If they're not already in the correct order, the larger number is moved to the right while the smaller number is moved to the left. Once those two are in the right order or if they were already in the correct order, the next two numbers are then compared. The largest number "bubbles" to the end of the list this way. One by one, the next largest number gets pushed to the end until the list is sorted.
+2. The merge sort algorithm takes a list and divides it in half over and over again until it is "n" lists with 1 number in each list. Then, two lists at a time, it compares the first number in each list to determine which is smaller. The smaller number is then popped off from the beginning of that list and added to a "merged" list. The lists of 1 number become lists of 2 sorted numbers which then become sorted lists of 4 numbers until it's 1 list of all the numbers sorted from smallest to largest.
+3. The quicksort algorithm starts by picking a pivot. Then, you iterate through the list and determine whether each number is less than or greater than the pivot and put to the left or right of the pivot respectively. You then do this again for both the left and right side of the list. You continue until the list is sorted.
+
+Git Branching
+1. One would use git branching while working at a company with deployed software. The engineers would want to work on a separate branch from the master branch as to not affect the live code base until they were ready.
+2. A pull request is what someone sends to the owner(s) of a repository requesting them to look at the changes they made in a separate branch and merge them into the original respository.
